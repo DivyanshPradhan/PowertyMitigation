@@ -4,6 +4,96 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/cardview_dark_background"
     tools:context=".Home">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Fill Form Details"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:background="#ffffff"
+        android:hint="Enter Name"
+        android:textAlignment="center"
+        android:textColor="#3F51B5" />
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:background="#ffffff"
+        android:hint="Enter loacation"
+        android:textAlignment="center"
+        android:textColor="#3F51B5" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColorHint="#ffffff"
+        android:textSize="30dp"
+        android:hint="Age"
+        android:textStyle="bold"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/Infant"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Infant"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
+        <RadioButton
+            android:id="@+id/Kid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Kid"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
+        <RadioButton
+            android:id="@+id/Young"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Young"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
+        <RadioButton
+            android:id="@+id/Old"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Old"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
+    </RadioGroup>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:text="Submit"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"/>
 </LinearLayout>
