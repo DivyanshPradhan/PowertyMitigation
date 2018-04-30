@@ -39,7 +39,7 @@ public class Login_Page extends AppCompatActivity {
     public void login(View view)
     {
         String name = editText.getText().toString();
-        String pass = editText.getText().toString();
+        String pass = editText2.getText().toString();
         PovertyDataBaseAdapter povertyDataBaseAdapter = new PovertyDataBaseAdapter(this);
         if(povertyDataBaseAdapter.getUser(name,pass))
         {

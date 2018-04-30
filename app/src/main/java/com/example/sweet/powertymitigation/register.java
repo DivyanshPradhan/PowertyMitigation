@@ -17,6 +17,7 @@ public class register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+
         fname = (EditText) findViewById(R.id.fn);
         lname = (EditText) findViewById(R.id.ln);
         password = (EditText) findViewById(R.id.password);
@@ -24,7 +25,7 @@ public class register extends AppCompatActivity {
         email = (EditText) findViewById(R.id.email);
     }
 
-    public void register(View view) {
+    public void Register(View view) {
         FirstName = fname.getText().toString();
         LastName = lname.getText().toString();
         Password = password.getText().toString();
@@ -33,7 +34,7 @@ public class register extends AppCompatActivity {
 
 
             if(fname.length()>1 && lname.length()>1) {
-                if (password.length()!=8) {
+                if (password.length()>=8) {
                     if (Password.equals(ConfrimPassword)) {
                         povertyDataBaseAdapter = new PovertyDataBaseAdapter(getApplicationContext());
                         long id = povertyDataBaseAdapter.addUser(FirstName, LastName, Password, Email);
@@ -50,7 +51,6 @@ public class register extends AppCompatActivity {
                     Message.message(this, "Fill in details properly");
 
             }
-
 
 
 
