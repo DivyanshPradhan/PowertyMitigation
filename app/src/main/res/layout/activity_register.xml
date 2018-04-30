@@ -5,9 +5,10 @@
     android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cardview_dark_background"
+    android:background="@drawable/bg"
     android:orientation="vertical"
     tools:context="com.example.sweet.powertymitigation.register">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,72 +21,77 @@
 
     <EditText
         android:id="@+id/fn"
+        android:textColorHint="#ffffff"
         android:layout_width="match_parent"
         android:layout_height="45dp"
+        android:textColor="#ffffff"
         android:layout_marginBottom="10dp"
         android:layout_marginEnd="15dp"
         android:layout_marginStart="15dp"
-        android:background="#ffffff"
+        android:background="@drawable/textfeilds"
         android:hint="First Name"
-        android:textAlignment="center"
-        android:textColor="#3F51B5" />
+        android:textAlignment="center" />
 
     <EditText
         android:id="@+id/ln"
+        android:textColorHint="#ffffff"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginBottom="10dp"
         android:layout_marginEnd="15dp"
         android:layout_marginStart="15dp"
-        android:background="#ffffff"
+        android:background="@drawable/textfeilds"
         android:hint="Last Name"
         android:textAlignment="center"
-        android:textColor="#3F51B5" />
+        android:textColor="#ffffff" />
 
     <EditText
         android:id="@+id/email"
+        android:textColorHint="#ffffff"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginBottom="10dp"
         android:layout_marginEnd="15dp"
         android:layout_marginStart="15dp"
-        android:background="#ffffff"
+        android:background="@drawable/textfeilds"
         android:hint="Email Or Phone"
         android:inputType="textEmailAddress"
         android:textAlignment="center"
-        android:textColor="#3F51B5" />
+        android:textColor="#ffffff" />
 
     <EditText
         android:id="@+id/password"
+        android:textColorHint="#ffffff"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginEnd="15dp"
         android:layout_marginStart="15dp"
-        android:background="#ffffff"
+        android:background="@drawable/textfeilds"
         android:inputType="textPassword"
         android:hint="Password( 6 Or more character)"
         android:textAlignment="center"
-        android:textColor="#3F51B5" />
+        android:textColor="#ffffff" />
     <EditText
         android:id="@+id/cpassword"
+        android:textColorHint="#ffffff"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginBottom="10dp"
         android:layout_marginEnd="15dp"
         android:layout_marginTop="10dp"
         android:layout_marginStart="15dp"
-        android:background="#ffffff"
+        android:background="@drawable/textfeilds"
         android:inputType="textPassword"
         android:hint=" Confrim Password"
         android:textAlignment="center"
-        android:textColor="#3F51B5" />
+        android:textColor="#ffffff" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="You Agreed to The Poverty Mitigation User Agreement,Privacy Policy and Cookie policy.For Phone NO Signups We Will Send A Verification Code VIa Sms."
         android:layout_marginTop="10dp"
         android:textSize="14dp"
-        android:textColor="#3f51b5"
+        android:textColor="#ffffff"
         android:layout_marginStart="10dp"/>
 
     <Button
@@ -95,15 +101,17 @@
         android:layout_marginEnd="10dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="15dp"
-        android:background="#3F51B5"
+        android:background="@drawable/textfeilds"
+        android:backgroundTint="#ff17e2"
         android:onClick="Register"
+        android:textColor="#ffffff"
         android:text="Agreed and Join" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:textSize="18dp"
-        android:textColor="#3F51B5"
+        android:textColor="#ffffff"
         android:textAlignment="center"
         android:text="Already Register ? sign in"/>
 
