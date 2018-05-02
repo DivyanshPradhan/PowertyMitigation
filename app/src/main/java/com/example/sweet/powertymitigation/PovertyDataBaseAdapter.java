@@ -53,6 +53,25 @@ public class PovertyDataBaseAdapter {
        }
        return false;
     }
+    public String getDataBase()
+    {
+
+        SQLiteDatabase db=new PovertyDatabase(context).getReadableDatabase();
+        String columns[]={PovertyDatabase.UID,PovertyDatabase.FNAME,PovertyDatabase.LNAME,PovertyDatabase.PASSWORD, PovertyDatabase.EMAIL};
+        Cursor cursor=db.query(PovertyDatabase.TABLE_NAME,columns,null,null,null,null,null);
+        StringBuffer buffer=new StringBuffer();
+        while(cursor.moveToNext())
+        {
+            int id=cursor.getInt(0);
+            String fname=cursor.getString(1);
+            String lname=cursor.getString(2);
+            String password=cursor.getString(3);
+            String email=cursor.getString(4);
+            buffer.append(id+" "+fname+" "+lname+" "+password+" "+email+"\n");
+        }
+        return buffer.toString();
+
+    }
 
     class PovertyDatabase extends SQLiteOpenHelper {
 

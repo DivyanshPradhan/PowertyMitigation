@@ -1,5 +1,9 @@
 package com.example.sweet.powertymitigation;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -8,12 +12,17 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
@@ -25,16 +34,22 @@ public class Home extends AppCompatActivity {
     EditText editText, editText2;
     RadioGroup radioGroup;
     String age;
+    PovertyDataBaseAdapter povertyDataBaseAdapter;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     ToggleButton toggleButton;
     Toolbar toolbar;
     ActionBar actionBar;
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+
+
+
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         actionBar = getSupportActionBar();
@@ -45,7 +60,6 @@ public class Home extends AppCompatActivity {
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer);
         navigationView = (NavigationView) findViewById(R.id.nav);
-
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_black_24dp);
 
@@ -55,12 +69,29 @@ public class Home extends AppCompatActivity {
                 switch (item.getItemId())
                 {
                     case R.id.Archive:
-                        Toast.makeText(Home.this,"Archive",Toast.LENGTH_SHORT).show();
+                        Message.message(Home.this, "view request");
+
                         break;
+                    case R.id.Archive2:
+                        Message.message(Home.this, "About us clicked");
+                        break;
+                    case R.id.Archive3:
+                        Message.message(Home.this, "FeedBack And Support is clicked");
+                        break;
+                    case R.id.Archive4:
+
+
+                        break;
+
                 }
                 return false;
             }
         });
+
+        View layout = navigationView.getHeaderView(0);
+        TextView textView = layout.findViewById(R.id.username);
+        textView.setText(getIntent().getStringExtra("Name"));
+
 
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -86,6 +117,15 @@ public class Home extends AppCompatActivity {
                 }
             }
         });
+
+        /*PrefManager prefManager = new PrefManager(getSharedPreferences("PM", Context.MODE_PRIVATE));
+        Log.d("App:",prefManager.getData());
+        prefManager = null;*/
+
+
+
+
+
     }
 
     @Override
@@ -111,6 +151,7 @@ public class Home extends AppCompatActivity {
     {
         PovertyDataBaseAdapter povertyDataBaseAdapter =new PovertyDataBaseAdapter(this);
         povertyDataBaseAdapter.form(editText.getText().toString(),editText2.getText().toString(),age);
+        Message.message(this,"Data Register Succesfully");
 
     }
 }

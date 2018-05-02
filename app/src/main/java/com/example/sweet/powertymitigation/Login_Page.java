@@ -45,6 +45,13 @@ public class Login_Page extends AppCompatActivity {
         {
             Intent i = new Intent(this,Home.class);
             startActivity(i);
+            Message.message(this,"Login Succesfully");
+        }
+        else if(name.equals("admin@povertymitigation") && pass.equals("qazwsx"))
+        {
+            Intent i=new Intent(this,admin.class);
+            startActivity(i);
+            finish();
         }
         else
         {

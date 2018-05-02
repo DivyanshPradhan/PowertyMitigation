@@ -1,5 +1,6 @@
 package com.example.sweet.powertymitigation;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -24,6 +25,12 @@ public class register extends AppCompatActivity {
         cpassword = (EditText) findViewById(R.id.cpassword);
         email = (EditText) findViewById(R.id.email);
     }
+    public void back(View view)
+    {
+        Intent intent =new Intent(this,Login_Page.class);
+        startActivity(intent);
+        finish();
+    }
 
     public void Register(View view) {
         FirstName = fname.getText().toString();
@@ -40,8 +47,13 @@ public class register extends AppCompatActivity {
                         long id = povertyDataBaseAdapter.addUser(FirstName, LastName, Password, Email);
                         Log.d("App:", "" + id);
                         Message.message(this, "Register Sucessfully");
+                        /*PrefManager prefManager = new PrefManager(getSharedPreferences("PM", Context.MODE_PRIVATE));
+                        prefManager.putData(FirstName,LastName);
+                        prefManager = null;*/
                         finish();
-                        startActivity(new Intent(this, Home.class));
+                        Intent intent = new Intent(this, Home.class);
+                        intent.putExtra("Name",FirstName + " " + LastName);
+                        startActivity(intent);
                     } else
                         Message.message(this, "password Dont match");
                 } else

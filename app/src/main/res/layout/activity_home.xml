@@ -16,6 +16,7 @@
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
+            app:titleTextColor="@android:color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent">
@@ -25,7 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:text="Fill Form Details"
+            android:text="Who Need Help"
             android:textSize="25dp"
             android:typeface="serif"
             android:textAlignment="center"
@@ -78,37 +79,37 @@
                 android:id="@+id/Infant"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Infant"
+                android:text="Infant ( upto 2 years)"
                 android:typeface="serif"
                 android:textColor="#ffffff"
-                android:textSize="25dp"
+                android:textSize="17dp"
                 android:textStyle="bold"/>
             <RadioButton
                 android:id="@+id/Kid"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Kid"
+                android:text="Kid (upto 12 years)"
                 android:typeface="serif"
                 android:textColor="#ffffff"
-                android:textSize="25dp"
+                android:textSize="17dp"
                 android:textStyle="bold"/>
             <RadioButton
                 android:id="@+id/Young"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Young"
+                android:text="Adult(18 and above)"
                 android:typeface="serif"
                 android:textColor="#ffffff"
-                android:textSize="25dp"
+                android:textSize="17dp"
                 android:textStyle="bold"/>
             <RadioButton
                 android:id="@+id/Old"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Old"
+                android:text="Senior Citizen (Above 60)"
                 android:typeface="serif"
                 android:textColor="#ffffff"
-                android:textSize="25dp"
+                android:textSize="17dp"
                 android:textStyle="bold"/>
         </RadioGroup>
 

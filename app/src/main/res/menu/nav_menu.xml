@@ -2,11 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item android:id="@+id/Archive"
-        android:title="Archive" />
+        android:title=" View Request" />
     <item android:id="@+id/Archive2"
-        android:title="Archive2" />
+        android:title="About us" />
     <item android:id="@+id/Archive3"
-        android:title="Archive3" />
+        android:title="Feedback and Support" />
     <item android:id="@+id/Archive4"
-        android:title="Archive4" />
+        android:title="Logout" />
 </menu>
